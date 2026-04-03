@@ -1,0 +1,33 @@
+output:
+  max_total_size: "500MB"
+  max_file_size: "50MB"
+  
+  allowed_file_types:
+    - ".py"
+    - ".js"
+    - ".ts"
+    - ".tsx"
+    - ".jsx"
+    - ".html"
+    - ".css"
+    - ".json"
+    - ".yaml"
+    - ".yml"
+    - ".md"
+    - ".txt"
+    - ".gitignore"
+    - ".env.example"
+    - "Dockerfile"
+    - "docker-compose.yml"
+    - "package.json"
+    - "requirements.txt"
+    - "pyproject.toml"
+    - "setup.py"
+    - "README.md"
+    - "LICENSE"
+  
+  output_dir: "./output"
+  logs_dir: "./logs"
+  
+  space_limit_strategy: "warn"
+  compress_output: false

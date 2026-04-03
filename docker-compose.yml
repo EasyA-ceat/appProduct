@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  app-product-workflow:
+    build:
+      context: .
+      dockerfile: Dockerfile
+   
+    
+    container_name: app-product-workflow
+    
+    volumes:
+      - ./config:/app/config:ro
+      - ./logs:/app/logs
+      - ./output:/app/output
+    
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - PYTHONUNBUFFERED=1
+    
+    stdin_open: true
+    tty: true
+    
+    restart: unless-stopped
+    
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
