@@ -23,7 +23,7 @@ wheels/
 env/
 venv/
 ENV/
-logs/
-output/
+/logs/
+/output/
 *.log
 .DS_Store
