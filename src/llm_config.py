@@ -54,5 +54,13 @@ class LLMConfig:
                 max_tokens=max_tokens,
                 api_key=os.getenv('ANTHROPIC_API_KEY')
             )
+        elif provider == 'volcano':
+            return ChatOpenAI(
+                base_url=os.getenv('VOLC_API_BASE', 'https://ark.cn-beijing.volces.com/v3'),
+                api_key=os.getenv('VOLC_API_KEY'),
+                model=model,
+                temperature=temperature,
+                max_tokens=max_tokens
+            )
         else:
             raise ValueError(f"Unsupported LLM provider: {provider}")
