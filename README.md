@@ -16,9 +16,16 @@
 
 ## 安装
 
+### 系统要求
+
+- **Python 版本**: 3.10 - 3.12（推荐 3.11）
+- **注意**: Python 3.13 可能存在兼容性问题
+
+### 安装步骤
+
 ```bash
-# 创建虚拟环境
-python -m venv venv
+# 创建虚拟环境（推荐使用 Python 3.11）
+python3.11 -m venv venv
 
 # 激活虚拟环境
 # Windows:
